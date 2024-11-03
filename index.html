@@ -3,41 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/sanitize.css" />
-    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="css/sanitize.css" />
+    <link rel="stylesheet" type="text/css" href="css/styles.css" />
     <script defer src="./index.js"></script>
     <title>02_dom-manipulation--form</title>
 </head>
 <body>
-    <header>
-        <h1>Notes</h1>
+    <header class="title__container">
+        <h1>NoteKeeper</h1>
     </header>
-    <main>
-    <section>
-        <h2>Form</h2>
+    <main class="main__container">
+    <section class="form__container card__container">
+        <h2>New Note Form</h2>
         <form>
-        <label>
-            Title
-            <input type="text" id="title" name="title" required/>
-        </label>
-        <label>
-            Content
-            <input type="text" id="content" name="content" required/>
-        </label>
-        <label>
-            Priority
-            <select id="priority" name="priority">
-                <option value="no_priority" selected disabled>No Priority</option>
-                <option value="high">High</option>
-                <option value="medium">Medium</option>
-                <option value="low">Low</option>
-            </select>
-        </label>
-        <button type="submit">Submit</button>
+            <label>
+                Title
+                <input type="text" id="title" name="title" required/>
+            </label>
+            <label>
+                Content
+                <input type="text" id="content" name="content" required/>
+            </label>
+            <label>
+                Priority
+                <select id="priority" name="priority">
+                    <option value="Priority" selected disabled>Select Priority</option>
+                    <option value="high">High</option>
+                    <option value="medium">Medium</option>
+                    <option value="low">Low</option>
+                </select>
+            </label>
+            <button type="submit">Add Note</button>
         </form>
     </section>
-    <section>
+    <section class="users__container card__container">
         <h2>Notes List</h2>
+        <div id="tasklist"></div>
     </section>
 </body>
 </html>
